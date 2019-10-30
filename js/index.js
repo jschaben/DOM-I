@@ -81,22 +81,31 @@ const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
 // main section
+const middleContent = siteContent['main-content'];
+
 let paragraphHeadings = document.querySelectorAll("h4");
 paragraphHeadings[0].innerText = "Features";
-paragraphHeadings[1].innerText = "Product";
-paragraphHeadings[2].innerText = "Vision";
-paragraphHeadings[3].innerText = "Features";
-paragraphHeadings[4].innerText = "About";
+paragraphHeadings[1].innerText = "About";
+paragraphHeadings[2].innerText = "Services";
+paragraphHeadings[3].innerText = "Product";
+paragraphHeadings[4].innerText = "Vision";
 paragraphHeadings[5].innerText = "Contact";
 
 let textBlocks = document.querySelectorAll("p");
-textBlocks[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-textBlocks[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-textBlocks[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-textBlocks[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-textBlocks[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-textBlocks[5].innerText = "123 Way 456 Street";
-textBlocks[6].innerText = "Somewhere, USA";
-textBlocks[7].innerText = "1 (888) 888-8888";
-textBlocks[8].innerText = "sales@greatidea.io";
-textBlocks[9].innerText = "Copyright Great Idea! 2018";
+textBlocks[0].textContent = middleContent['features-content'];
+textBlocks[1].textContent = middleContent['about-content'];
+textBlocks[2].textContent = middleContent['services-content'];
+textBlocks[3].textContent = middleContent['product-content'];
+textBlocks[4].textContent = middleContent['vision-content'];
+
+const contactSection = siteContent.contact;
+const contactParagraph = document.querySelectorAll('.contact p');
+contactParagraph[0].textContent = contactSection.address;
+contactParagraph[1].textContent = contactSection.phone;
+contactParagraph[2].textContent = contactSection.email;
+// footer
+
+const foot = siteContent.footer;
+
+const copyright = document.querySelector('footer p');
+copyright.textContent = foot.copyright;
