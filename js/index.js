@@ -56,6 +56,19 @@ let itemIncrements = 1;
 const navList = navItems.forEach(ni => {
   return (ni.textContent = siteContent.nav[`nav-item-${itemIncrements++}`]);
 });
+let nav = document.querySelector('header nav')
+let link1 = document.createElement('a');
+link1.innerHTML = 'Home';
+nav.prepend(link1);
+let link2 = document.createElement('a');
+link2.innerHTML = 'Members';
+nav.append(link2);
+
+navItems.forEach(link => {
+  link.style.color = "green";
+});
+link1.style.color = "green";
+link2.style.color = "green";
 
 // header
 
