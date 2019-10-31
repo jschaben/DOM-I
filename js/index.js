@@ -72,8 +72,14 @@ link2.style.color = "green";
 
 // header
 
-const headerText = document.querySelector('h1');
-headerText.textContent = siteContent.cta.h1;
+// const headerText = document.querySelector('h1');
+// headerText.textContent = siteContent.cta.h1;
+
+const headerText = document.querySelector('.cta-text h1');
+headerText.innerHTML = siteContent.cta.h1.replace(/\s/g, '</br>');
+
+// const ctaText = document.querySelector(".cta-text h1");
+// ctaText.Node.textContent = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 
 // button
 
@@ -100,7 +106,7 @@ textBlocks[4].textContent = middleContent['vision-content'];
 
 const contactSection = siteContent.contact;
 const contactParagraph = document.querySelectorAll('.contact p');
-contactParagraph[0].textContent = contactSection.address;
+contactParagraph[0].innerHTML = "123 Way Street </br> Somewhere, USA";
 contactParagraph[1].textContent = contactSection.phone;
 contactParagraph[2].textContent = contactSection.email;
 // footer
