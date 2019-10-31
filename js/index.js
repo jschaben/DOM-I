@@ -117,7 +117,7 @@ function mouseout() {
 // headerText.textContent = siteContent.cta.h1;
 
 const headerText = document.querySelector('.cta-text h1');
-headerText.innerHTML = siteContent.cta.h1.replace(/\s/g, '</br>');
+headerText.innerText = 'Dom \n is \n Awesome \n';
 
 // const ctaText = document.querySelector(".cta-text h1");
 // ctaText.Node.textContent = siteContent['cta']['h1'].replace(/\s/g, "</br>");
