@@ -66,9 +66,50 @@ nav.append(link2);
 
 navItems.forEach(link => {
   link.style.color = "green";
+  link.onmouseover = function() {
+    mouseover();
+  };
+  link.onmouseout = function() {
+    mouseout();
+  };
+  function mouseover () {
+    link.style.backgroundColor = 'lightblue';
+  }
+  function mouseout() {
+    link.style.backgroundColor = "white";
+  }
 });
 link1.style.color = "green";
+link1.onmouseover = function() {
+  link1mouseover();
+};
+link1.onmouseout = function() {
+ link1mouseout();
+};
+function link1mouseover () {
+  link1.style.backgroundColor = 'lightblue';
+}
+function link1mouseout() {
+  link1.style.backgroundColor = "white";
+}
+
+
 link2.style.color = "green";
+link2.onmouseover = function() {
+  mouseover();
+};
+link2.onmouseout = function() {
+  mouseout();
+};
+function mouseover () {
+  link2.style.backgroundColor = 'lightblue';
+}
+function mouseout() {
+  link2.style.backgroundColor = "white";
+}
+
+
+
 
 // header
 
